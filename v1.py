@@ -45,7 +45,7 @@ def second_screen(status):
     def results():
         pass
 
-    measure1_label = Label(root, text='Podaj SWOJE ciśnienie tętnicze skurczowe')
+    measure1_label = Label(root, text='Podaj ciśnienie tętnicze skurczowe')
     measure1_label.grid(row=1, column=0, padx=10, pady=10)
     measure1_entry = Entry(root, width=30, borderwidth=5)
     measure1_entry.grid(row=1, column=1, padx=(0, 10))
