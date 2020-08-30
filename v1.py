@@ -45,7 +45,22 @@ def second_screen(status):
     def results():
         pass
 
-
+    measure1_label = Label(root, text='Podaj SWOJE ciśnienie tętnicze skurczowe')
+    measure1_label.grid(row=1, column=0, padx=10, pady=10)
+    measure1_entry = Entry(root, width=30, borderwidth=5)
+    measure1_entry.grid(row=1, column=1, padx=(0, 10))
+    measure2_label = Label(root, text='Podaj ciśnienie tętnicze rozkurczowe')
+    measure2_label.grid(row=2, column=0, padx=10, pady=10)
+    measure2_entry = Entry(root, width=30, borderwidth=5)
+    measure2_entry.grid(row=2, column=1, padx=(0, 10))
+    add_button = Button(root, text='Dodaj', command=add, width=35)
+    add_button.grid(row=3, column=0, columnspan=2, pady=10)
+    results_button = Button(root, text='Wyniki', width=35, command=results)
+    results_button.grid(row=4, column=0, columnspan=2, pady=(0, 10))
+    plot_button = Button(root, text='Wykres', width=35, command=plot)
+    plot_button.grid(row=5, column=0, columnspan=2)
+    quit_button = Button(root, text='Wyjście', command=leaving)
+    quit_button.grid(row=6, column=1, sticky='e', pady=5, padx=5)
 
     # Commit Changes
     data.commit()
